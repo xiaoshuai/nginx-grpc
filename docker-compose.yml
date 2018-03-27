@@ -1,0 +1,10 @@
+version: '3.1'
+
+services:
+  nginx:
+    container_name: nginx-with-grpc
+    image: nginx:1.13.10
+    volumes:
+     - ./nginx/grpc.conf:/etc/nginx/conf.d/grpc.conf
+    ports:
+     - 8080:80
